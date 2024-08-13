@@ -32,12 +32,6 @@ public class DepartmentManager extends Employee {
 		}
 	}
 
-//	@Override
-//	public void update() {
-//		this.employeeNumber--;
-//		System.out.println("Update Employee Number successfully!");
-//	}
-
 	@Override
 	public String toString() {
 		return super.toString() + "DepartmentManager [employeeNumber=" + employeeNumber + "]";

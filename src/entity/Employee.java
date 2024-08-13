@@ -12,6 +12,7 @@ public class Employee {
 	private String phone;
 	private double workDay;
 	private long salaryPerDay;
+	private String department;
 	
 	public String getId() {
 		return id;
@@ -19,6 +20,14 @@ public class Employee {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+	
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
 	}
 
 	public String getName() {
@@ -86,6 +95,11 @@ public class Employee {
 			} while (this.phone.strip().equals(""));
 			
 			do {
+				System.out.println("Department: ");
+				this.department = this.scanner.nextLine();
+			} while (this.department.strip().equals(""));
+			
+			do {
 				System.out.print("Salary per month: ");
 				this.salaryPerDay = this.scanner.nextLong();
 			} while (this.salaryPerDay < 0);			
@@ -118,6 +132,6 @@ public class Employee {
 
 	public void displayInfo() {
 		System.out.println("Employee Id=" + id + ", name=" + name + ", phone=" + phone
-				+ ", salaryPerDay=" + salaryPerDay	+ ", workDay=" + workDay);
+				+ ", department= " + this.department + ", salaryPerDay=" + salaryPerDay	+ ", workDay=" + workDay);
 	}
 }

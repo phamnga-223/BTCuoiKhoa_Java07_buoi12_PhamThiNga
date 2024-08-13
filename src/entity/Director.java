@@ -17,4 +17,19 @@ public class Director extends Employee {
 		super.displayInfo();
 		System.out.println("Stock: " + this.stock);
 	}
+	
+	@Override
+	public void inputData() {
+		super.inputData();
+		
+		try {
+			do {
+				System.out.print("Stock: ");
+				this.stock = this.getScanner().nextDouble();
+			} while (this.stock < 0);
+		} catch (Exception ex) {
+			System.out.println("Error!");
+			ex.printStackTrace();
+		}
+	}
 }
