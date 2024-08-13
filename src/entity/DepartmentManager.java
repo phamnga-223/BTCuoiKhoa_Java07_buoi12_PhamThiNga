@@ -2,6 +2,12 @@ package entity;
 
 public class DepartmentManager extends Employee {
 
+	final long SALARY_PER_DAY = 200;
+	
+	public DepartmentManager() {
+		super.setSalaryPerDay(SALARY_PER_DAY);
+	}
+
 	private int employeeNumber;
 	
 	public int getEmployeeNumber() {

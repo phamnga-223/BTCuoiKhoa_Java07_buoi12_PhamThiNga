@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Employee {
 	
+	final long SALARY_PER_DAY = 100;
+	
 	private Scanner scanner;
 	
 	private String id;
@@ -13,6 +15,10 @@ public class Employee {
 	private double workDay;
 	private long salaryPerDay;
 	private String department;
+	
+	public Employee() {
+		this.salaryPerDay = SALARY_PER_DAY;
+	}
 	
 	public String getId() {
 		return id;
@@ -97,12 +103,7 @@ public class Employee {
 			do {
 				System.out.println("Department: ");
 				this.department = this.scanner.nextLine();
-			} while (this.department.strip().equals(""));
-			
-			do {
-				System.out.print("Salary per month: ");
-				this.salaryPerDay = this.scanner.nextLong();
-			} while (this.salaryPerDay < 0);			
+			} while (this.department.strip().equals(""));		
 
 			do {
 				System.out.print("Work day: ");
